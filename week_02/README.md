@@ -1,5 +1,5 @@
 # 2주차 과제
-## Open Challenge 02
+## [Open Challenge 02](/week_02/OpenChallenge/OpenChallenge02.html)
 ![Open Challenge Screenshot](md/oc2.png)
 * 구현 기능
     * 오디오
