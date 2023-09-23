@@ -1,0 +1,13 @@
+td.list {
+	border : 1px solid yellowgreen;
+	padding-left : 3px;
+	padding-right : 3px;
+}
+th {
+	width : 200px;
+	text-align : left;
+	border-bottom : 1px solid gray;	
+}
+button:hover {
+	color : magenta;
+}

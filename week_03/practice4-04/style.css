@@ -1,0 +1,21 @@
+h3.headline {
+    color: brown;
+    text-align: center;
+}
+
+div.help {
+    color: blue;
+}
+
+p.help {
+    color: red; 
+    font-size: 2em;
+}
+
+#hot {
+    background: orange;
+}
+
+body {
+    background: powderblue;
+}
