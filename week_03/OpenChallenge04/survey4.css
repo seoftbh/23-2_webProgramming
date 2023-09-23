@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Humanbumsuk';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: aliceblue;
+}
+h1 {
+    color: brown;
+    text-align: center;
+}
+header {
+    border-bottom: 1px solid;
+}
+h2 {
+    color: blue;
+    text-shadow: 3px 3px 5px skyblue;
+}
+h3.question {
+    display: inline;
+    color: blue;
+}
+p {
+    font-family: Humanbumsuk;
+    font-size: 1em;
+    text-indent: 1em;
+}
+section>div {
+    background-color: lightblue;
+    margin: 20px;
+    padding: 0px 20px;
+}
+
+footer {
+    border-radius: 12px;
+    background-color: orange;
+}
