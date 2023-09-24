@@ -56,7 +56,7 @@
 * 링크 꾸미기, `:hover`
 
 #### [7번](./practice4-07/practice4-07.html)
-![7번 Screenshot](./md/practice4-07.png)
+![7번 Screenshot](./md/practice4-07.gif)
 * `:hover` 활용
 
 #### [8번](./practice4-08/practice4-08.html)
