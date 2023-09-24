@@ -1,18 +1,22 @@
 ol {
-    list-style-type: none; /* 마커 제거 */
+    list-style-type: none;
+    /* 마커 제거 */
     padding: 0px 20px;
 }
 
 div {
     border: 2px solid darkgoldenrod;
 }
+
 div h3 {
     text-align: center;
 }
+
 p {
     padding-left: 40px;
-    
+
 }
+
 span {
     color: olive;
     font-size: 30px;

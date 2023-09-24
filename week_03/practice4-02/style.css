@@ -1,12 +1,14 @@
 body {
     background-color: aliceblue;
 }
+
 p {
     font-family: Lucida console;
-    color : brown;
+    color: brown;
     font-size: 10px;
 }
-p > span {
+
+p>span {
     font-size: 1.5em;
     text-decoration: underline;
 }

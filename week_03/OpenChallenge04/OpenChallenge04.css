@@ -8,23 +8,29 @@
 body {
     background-color: aliceblue;
 }
+
 h1 {
     color: brown;
     text-align: center;
 }
+
 header {
     border-bottom: 1px solid;
 }
+
 nav>ul {
     border: 1px dotted;
 }
+
 a {
     text-decoration: none;
 }
+
 h2 {
     color: blue;
     text-shadow: 3px 3px 5px skyblue;
 }
+
 p {
     font-family: Humanbumsuk;
     font-size: 1em;
