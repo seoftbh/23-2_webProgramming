@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math.random()으로 램덤한 색 만들기</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 150px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>16개의 램덤한 색 만들기</h3>
+    <hr>
+    <script>
+        let rgb = new Array();
+        for (let i = 0; i < 16; i++) {
+            for (let i = 0; i < 3; i++) {
+                rgb[i] = Math.floor(Math.random() * 255);
+            }
+            // document.writeln(rgb.join(", "));
+            let color = rgb.join(", ");
+            document.write(
+                "<div style='background-color: rgb("
+                + color + ")'>"
+                + "rgb(" + color + ")" + "</div>"
+            );
+        }
+    </script>
+</body>
+
+</html>

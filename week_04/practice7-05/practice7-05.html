@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 배열 다루기</title>
+</head>
+
+<body>
+    <h3>문자열 배열 다루기</h3>
+    <hr>
+    <script>
+        function printArry(arry) {
+            for (let i = 0; i < names.length; i++) {
+                document.writeln(names[i]);
+            }
+            document.write("<br>");
+        }
+
+        let names = new Array("wonsun", "jaemoonlee", "kitae", "gracewhang");
+
+        // 배열 출력
+        document.write("이름 : ");
+        printArry(names);
+
+        // 가장 긴 이름
+        document.write("가장 긴 이름 : ");
+        let long = names[0];
+        for (let i = 1; i < names.length; i++) {
+            if (long.length < names[i].length) {
+                long = names[i];
+            }
+        }
+        document.write(long);
+        document.write("<br>");
+
+        // 가장 먼저 나오는 이름
+        document.write("가장 먼저 나오는 이름 : ");
+        names.sort();
+        document.write(names[0]);
+
+        // 사전순 정렬된 배열 출력
+        document.write("<br>증가순 이름 : ");
+        printArry(names);
+
+
+    </script>
+</body>
+
+</html>

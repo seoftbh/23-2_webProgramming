@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book 객체 배열 만들기</title>
+</head>
+<body>
+    <h3>book 객체 배열 만들기</h3>
+    <hr>
+    <script>
+        /* 입력 예제
+        HTML5, 황기태, 20000
+        CSS3, 이재문, 50000
+        Java, 한원선, 30000
+        스폰지밥, Grace, 60000
+        C++, Kitae, 25000
+        */
+
+        // 객체 배열
+        let bookArray = [];
+
+        for (let i = 0; i < 5; i++) {
+            let bookSpec = prompt("콤마(,)로 분리하면서 책제목 저자 가격 순으로 입력")
+                            .split(", "); 
+
+            // 객체 생성
+            let book = new Object();
+            book.title = bookSpec[0];
+            book.author = bookSpec[1];
+            book.price = bookSpec[2];
+
+            // 객체 배열에 생성된 객체 추가
+            bookArray[i] = book;
+        }
+        // document.writeln(bookArray[0].title);
+        // document.writeln(bookArray[0].author);
+        // document.writeln(bookArray[0].price);
+
+        // 객체 출력
+        for (let i = 0; i < bookArray.length; i++) {
+            document.write(
+                bookArray[i].title + ", "
+                + bookArray[i].author + ", " 
+                + bookArray[i].price
+                + "<br>"
+            );
+        }
+        
+        // 가격 비교
+        let maxIdx = 0;
+        for (let i = 1; i < bookArray.length; i++) {
+            if (bookArray[maxIdx].price < bookArray[i].price) {
+                maxIdx = i;
+            }
+        }
+        document.write(
+            "<hr>"
+            + "가장 가격이 비싼 책은 " + bookArray[maxIdx].title
+        );
+
+
+    </script>
+</body>
+</html>

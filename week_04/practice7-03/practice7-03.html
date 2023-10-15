@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방문 시간이 오전 오후에 따라 변하는 배경색상</title>
+</head>
+
+<body>
+    <h3>오전이면 lightskyblue, 오후이면 orange 배경</h3>
+    <hr>
+    <script>
+        let now = new Date();
+        if (now.getHours <= 12) { // 오전
+            document.body.style.backgroundColor = "lightskyblue";
+        } else { // 오후
+            document.body.style.backgroundColor = "orange";
+        }
+        document.write("현재 시간 : "
+            + now.getHours() + "시 "
+            + now.getMinutes() + "분 "
+            + now.getSeconds() + "초");
+    </script>
+</body>
+
+</html>
