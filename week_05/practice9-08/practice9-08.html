@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 객체의 target</title>
+    <style>
+        .selected {
+            font-size: 1.3em;
+        }
+    </style>
+    <script>
+        function changeSize(item) {
+            item.classList.add('selected');
+            let list = document.getElementsByTagName('li');
+            for (i = 0; i < list.length; i++) {
+                if (list[i] !== item && list[i].classList.contains('selected')) {
+                    list[i].classList.remove('selected');
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>아이템을 클릭하면 1.3배 크기로</h3>
+    <hr>
+    <p>여름 방학 때 하고 싶은 것들</p>
+    <ul>
+        <li onclick="changeSize(this)">자전거로 대한민국 일주</li>
+        <li onclick="changeSize(this)">책 100권 읽기</li>
+        <li onclick="changeSize(this)">철인 3종 경기 준비</li>
+        <li onclick="changeSize(this)">자비스크립트 정복</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmousemove</title>
+    <style>
+        body {
+            cursor: none;
+        }
+
+        #cursor {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            pointer-events: none;
+            display: absolute;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3>이미지 커서 만들기</h3>
+    <hr>
+    마우스를 움직이면 이미지로 만든 커서가 마우스를 따라 다닙니다.
+    <div id="cursor">
+        <img src="./src/fly_3d.png" width="50px" height="50px" alt="똥파리">
+    </div>
+    <script>
+        let cursor = document.getElementById("cursor");
+        document.body.style.cursor = "none";
+
+        document.onmousemove = function (event) {
+            cursor.style.left = (event.pageX - 20) + "px";
+            cursor.style.top = (event.pageY - 30) + "px";
+        };
+
+
+    </script>
+</body>
+
+</html>
