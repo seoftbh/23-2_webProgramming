@@ -1,5 +1,5 @@
 # 23-2_webProgramming
-[GitHub Pages](https://seoftbh.github.io/23-2_webProgramming/)
+![(github.com's favicon)](https://www.google.com/s2/favicons?domain=github.com) [GitHub Pages](https://seoftbh.github.io/23-2_webProgramming/)
 
 ---
 
