@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML</title>
+    <script>
+        function change() {
+            let p = document.getElementById("input");
+            let text = prompt("HTML 텍스트 혹은 그냥 텍스트를 입력하세요");
+            p.innerHTML = text;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>innerHTML</h3>
+    <hr>
+    <p id="input" onclick="change()">
+        이번 여름에는 어디로 여행을 갈까요?
+    </p>
+    <hr>
+    텍스트를 클릭하면 입력창이 표시됩니다. <br>
+    입력 예제) <br>
+    푸른 바다 &lt;span style=background-color:skyblue&gt;제주도&lt;/span&gt;로 갑시다!!
+</body>
+
+</html>

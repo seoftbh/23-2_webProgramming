@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>갬블링 게임</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h3>갬블링 게임</h3>
+    <br>
+    각 숫자를 클릭하면 0에서 2사이의 난수로 바뀝니다. 모두 같은 수가 나오면 승리합니다.
+    <hr>
+    <div id="box">
+        <div id="num1" onclick="choose(this)">0</div>
+        <div id="num2" onclick="choose(this)">0</div>
+        <div id="num3" onclick="last(this)">0</div>
+    </div>
+    <p id="result" onclick="reset()"></p>
+    <hr>
+    결과를 클릭하면 다시 시작됩니다.
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기 만들기</title>
+    <style>
+        button{
+            width: 80px;
+        }
+        td{
+            width: 100px;
+        }
+        input{
+            width: 400px;
+        }
+        </style>
+    <script>
+        function add(num){
+            let textfield = document.getElementById("textfield")
+            textfield.value = textfield.value + num
+        }
+        function result(){
+            let textfield = document.getElementById("textfield")
+            let a = eval(textfield.value)
+            document.getElementById("textfield").value = a
+        }
+        function CE(){
+            let textfield = document.getElementById("textfield")
+            document.getElementById("textfield").value = ""
+        }
+        function back(){
+            let textfield = document.getElementById("textfield")
+            textfield.value = textfield.value.substring(0, textfield.value.length-1);
+        }
+    </script>
+</head>
+
+<body>
+    <h3>계산기 만들기</h3>
+        <hr>
+        <input type="text" placeholder="0" id="textfield">
+        <table>
+            <tr>
+                <td><button type="button" onclick="back()">BACK</button></td>
+                <td><button type="button" onclick="CE()">CE</button></td>
+                <td><button type="button" onclick="CE()">C</button></td>
+                <td><button type="button" onclick="result()">=</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="add(7)">7</button></td>
+                <td><button type="button" onclick="add(8)">8</button></td>
+                <td><button type="button" onclick="add(9)">9</button></td>
+                <td><button type="button" onclick="add('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="add(4)">4</button></td>
+                <td><button type="button" onclick="add(5)">5</button></td>
+                <td><button type="button" onclick="add(6)">6</button></td>
+                <td><button type="button" onclick="add('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="add(1)">1</button></td>
+                <td><button type="button" onclick="add(2)">2</button></td>
+                <td><button type="button" onclick="add(3)">3</button></td>
+                <td><button type="button" onclick="add('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="add(0)">0</button></td>
+                <td><button type="button" onclick="add('+')">+</button></td>
+                <td><button type="button">NONE</button></td>
+                <td><button type="button">NONE</button></td>
+            </tr>
+        </table>
+
+    <hr>
+    입력예제: <code>25+3*5-6</code>
+</body>
+
+</html>
