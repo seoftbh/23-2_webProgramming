@@ -11,9 +11,9 @@
 * About Page
 * 4장 - Open Challenge 4, 실습문제
 * 5장 - Open Challenge 5, 실습문제
-### [4주차 과제 (10/16 제출)](https://github.com/seoftbh/23-2_webProgramming/tree/main/week_4)
+### [4주차 과제 (10/16 제출)](https://github.com/seoftbh/23-2_webProgramming/tree/main/week_04)
 * 6장 - Open Challenge 6, 실습문제
 * 7장 - Open Challenge 7, 실습문제
-### [7주차 과제](https://github.com/seoftbh/23-2_webProgramming/tree/main/week_7)
+### [7주차 과제](https://github.com/seoftbh/23-2_webProgramming/tree/main/week_07)
 * 8장 - Open Challenge 8, 실습문제
 * 9장 - Open Challenge 9, 실습문제
