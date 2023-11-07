@@ -1,179 +1,991 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>웹 프로그래밍 2023</title>
+    <!-- jquery for bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    
+    <link rel="icon" type="image/x-icon" href="./src/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/apple-touch-icon.png">
+    <link rel="manifest" href="./src/site.webmanifest">
+    <!-- github-corner -->
+    <link rel="stylesheet" href="./github-corner.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background-color: aliceblue;
+            /* padding-top: 100px; */
+            padding-bottom: 100px;
+            margin-bottom: 100px;
+        }
+
+        #top {
+            background-color: #151513;
+        }
+
+        .jumbotron {
+            background: no-repeat center url("./src/earth.png");
+            height: 80%;
+        }
+
+        .badge {}
+
+        #mainTitle {
+            color: white;
+        }
+
+        #bgSrc {
+            color: #667cae;
+        }
+
+        .box {
+            height: 30px;
+        }
+
+
+
+        /* Style the navbar */
+        #navbar {
+            /* overflow: hidden; */
+            /* background-color: #333; */
+            z-index: 10;
+        }
+
+        /* Navbar links */
+        #navbar a {
+            /* float: left; */
+            /* display: block; */
+            /* color: #f2f2f2; */
+            /* text-align: center; */
+            /* padding: 14px; */
+            /* text-decoration: none; */
+        }
+
+        /* Page content */
+        .content {
+            /* padding: 16px; */
+        }
+
+        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: inherit;
+        }
+
+        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+        .sticky+.content {
+            /* padding-top: 60px; */
+        }
+    </style>
+
+
 </head>
 
 <body>
-    <h1>주차별 과제</h1>
-    <h3>ToC</h3>
-    <ul>
-        <li><a href="#w01">1주차 레포트</a></li>
-        <li><a href="#w02">2주차 레포트</a></li>
-        <li><a href="#w03">3주차 레포트</a></li>
-        <li><a href="#w04">4주차 레포트</a></li>
-        <li><a href="#w07">7주차 레포트</a></li>
-    </ul>
-    <hr>
-    <h2 id="w01">1주차 레포트</h2>
-    <ul>
-        <li><a href="./week_01/58p.html">58p.html</a></li>
-        <ul>
-            <li><a href="./blob/main/week_01/58p.md">58p.md</a></li>
-        </ul>
-        <li><a href="./week_01/prac1-01.html">prac1-01.html</a></li>
-        <li><a href="./week_01/prac1-02.html">prac1-02.html</a></li>
-        <li><a href="./week_01/prac1-03.html">prac1-03.html</a></li>
-        <li><a href="./week_01/prac1-04.html">prac1-04.html</a></li>
-    </ul>
+    <!-- github-corner -->
+    <a href="https://github.com/seoftbh/23-2_webProgramming" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80"
+            viewBox="0 0 250 250"
+            style="fill:#359aff; color:#000; position: absolute; top: 0; border: 0; right: 0; z-index: 10;"
+            aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path
+                d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path
+                d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                fill="currentColor" class="octo-body"></path>
+        </svg></a>
 
-    <h2 id="w02">2주차 레포트</h2>
-    <ul>
-        <li><a href="./week_02/OpenChallenge/OpenChallenge02.html">OpenChallenge02.html</a></li>
-        <li><a href="./week_02/Practice2-01/practice2-01.html">practice2-01.html</a></li>
-        <li>practice2-02</li>
-            <ul>
-                <li><a href="./week_02/Practice2-02/practice2-02-1.html">practice2-02-1.html</a></li>
-                <li><a href="./week_02/Practice2-02/practice2-02-2.html">practice2-02-2.html</a></li>
-            </ul>
-        <li><a href="./week_02/Practice2-03/practice2-03.html">practice2-03.html</a></li>
-        <li>practice2-04</li>
-            <ul>
-                <li><a href="./week_02/Practice2-04/practice2-04-1.html">practice2-04-1.html</a></li>
-                <li><a href="./week_02/Practice2-04/practice2-04-2.html">practice2-04-2.html</a></li>
-            </ul>
-        <li><a href="./week_02/Practice2-05/practice2-05.html">practice-2-05.html</a></li>
-        <li><a href="./week_02/Practice2-06/practice-2-06.html">practice-2-06.html</a></li>
-        <li><a href="./week_02/Practice2-07/practice-2-07.html">practice-2-07.html</a></li>
-        <li><a href="./week_02/Practice2-08/practice-2-08.html">practice-2-08.html</a></li>
-    </ul>
-    <h2 id="w03">3주차 레포트</h2>
-    <ul>
-        <li>
-            <h3>about</h3>
-            <ul>
-                <li><a href="./week_03/aboutPage/index.html">aboutPage</a></li>
-            </ul>
-        </li>
-        <li>
-            <h3>chap4</h3>
-            <ul>
-                <li><a href="./week_03/OpenChallenge04/OpenChallenge04.html">OpenChallenge04.html</a></li>
-                <li><a href="./week_03/practice4-01/practice4-01.html">practice4-01</a></li>
-                <li><a href="./week_03/practice4-02/practice4-02.html">practice4-02</a></li>
-                <li><a href="./week_03/practice4-03/practice4-03.html">practice4-03</a></li>
-                <li><a href="./week_03/practice4-04/practice4-04.html">practice4-04</a></li>
-                <li><a href="./week_03/practice4-05/practice4-05.html">practice4-05</a></li>
-                <li><a href="./week_03/practice4-06/practice4-06.html">practice4-06</a></li>
-                <li><a href="./week_03/practice4-07/practice4-07.html">practice4-07</a></li>
-                <li><a href="./week_03/practice4-08/practice4-08.html">practice4-08</a></li>
-                <li><a href="./week_03/practice4-09/practice4-09.html">practice4-09</a></li>
-            </ul>
-        </li>
-        <li>
-            <h3>chap5</h3>
-            <ul>
-                <li><a href="./week_03/OpenChallenge05/OpenChallenge05.html">OpenChallenge05.html</a></li>
-                <li><a href="./week_03/practice5-01/practice5-01-1.html">practice5-01-1.html</a></li>
-                <li><a href="./week_03/practice5-01/practice5-01-2.html">practice5-01-2.html</a></li>
-                <li><a href="./week_03/practice5-02/practice5-02.html">practice5-02.html</a></li>
-                <li><a href="./week_03/practice5-03/practice5-03.html">practice5-03.html</a></li>
-                <li><a href="./week_03/practice5-04/practice5-04-1.html">practice5-04-1.html</a></li>
-                <li><a href="./week_03/practice5-04/practice5-04-2.html">practice5-04-2.html</a></li>
-                <li><a href="./week_03/practice5-05/practice5-05.html">practice5-05.html</a></li>
-                <li><a href="./week_03/practice5-06/practice5-06-1.html">practice5-06-1.html</a></li>
-                <li><a href="./week_03/practice5-06/practice5-06-2.html">practice5-06-2.html</a></li>
-                <li><a href="./week_03/practice5-07/practice5-07.html">practice5-07.html</a></li>
-                <li><a href="./week_03/practice5-08/practice5-08.html">practice5-08.html</a></li>
-                <li><a href="./week_03/practice5-09/practice5-09.html">practice5-09.html</a></li>
-                <li><a href="./week_03/practice5-10/practice5-10.html">practice5-10.html</a></li>
-            </ul>
-        </li>
-    </ul>
-    <h2 id="w04">4주차 레포트</h2>
-    <ul>
-        <li>
-            <h3>chap6</h3>
-            <ul>
-                <li><a href="./week_04/OpenChallenge06/OpenChallenge06.html">OpenChallenge06.html</a></li>
-                <li><a href="./week_04/practice6-01/practice6-01.html">practice6-01.html</a></li>
-                <li><a href="./week_04/practice6-01/practice6-01-2.html">practice6-01-2.html</a></li>
-                <li><a href="./week_04/practice6-02/practice6-02.html">practice6-02.html</a></li>
-                <li><a href="./week_04/practice6-03/practice6-03-1.html">practice6-03-1.html</a></li>
-                <li><a href="./week_04/practice6-03/practice6-03-2.html">practice6-03-2.html</a></li>
-                <li><a href="./week_04/practice6-04/practice6-04.html">practice6-04.html</a></li>
-                <li><a href="./week_04/practice6-05/practice6-05.html">practice6-05.html</a></li>
-                <li><a href="./week_04/practice6-06/practice6-06-1.html">practice6-06-1.html</a></li>
-                <li><a href="./week_04/practice6-06/practice6-06-2.html">practice6-06-2.html</a></li>
-                <li><a href="./week_04/practice6-07/practice6-07.html">practice6-07.html</a></li>
-                <li><a href="./week_04/practice6-08/practice6-08.html">practice6-08.html</a></li>
-            </ul>
-        </li>
-        <li>
-            <h3>chap7</h3>
-            <ul>
-                <li><a href="./week_04/OpenChallenge07/OpenChallenge07.html">OpenChallenge07.html</a></li>
-                <li><a href="./week_04/practice7-01/practice7-01.html">practice7-01.html</a></li>
-                <li><a href="./week_04/practice7-02/practice7-02.html">practice7-02.html</a></li>
-                <li><a href="./week_04/practice7-03/practice7-03.html">practice7-03.html</a></li>
-                <li><a href="./week_04/practice7-04/practice7-04.html">practice7-04.html</a></li>
-                <li><a href="./week_04/practice7-05/practice7-05.html">practice7-05.html</a></li>
-                <li><a href="./week_04/practice7-06/practice7-06.html">practice7-06.html</a></li>
-                <li><a href="./week_04/practice7-07/practice7-07.html">practice7-07.html</a></li>
-                <li><a href="./week_04/practice7-08/practice7-08.html">practice7-08.html</a></li>
-                <li><a href="./week_04/practice7-09/practice7-09-1.html">practice7-09-1.html</a></li>
-                <li><a href="./week_04/practice7-09/practice7-09-2.html">practice7-09-2.html</a></li>
-                <li><a href="./week_04/practice7-09/practice7-09-3.html">practice7-09-3.html</a></li>
-                <li><a href="./week_04/practice7-10/practice7-10.html">practice7-10.html</a></li>
-            </ul>
-        </li>
-    </ul>
 
-    <h2 id="w07">7주차 레포트</h2>
-    <ul>
-        <li>
-            <h3>chap8</h3>
-            <ul>
-                <li><a href="./week_07/OpenChallenge08/OpenChallenge08.html">OpenChallenge08.html</a></li>
-                <li><a href="./week_07/practice8-01/practice8-01-1.html">practice8-01-1</a></li>
-                <li><a href="./week_07/practice8-01/practice8-01-2.html">practice8-01-2</a></li>
-                <li><a href="./week_07/practice8-01/practice8-01-3.html">practice8-01-3</a></li>
-                <li><a href="./week_07/practice8-02/practice8-02-1.html">practice8-02-1</a></li>
-                <li><a href="./week_07/practice8-02/practice8-02-2.html">practice8-02-2</a></li>
-                <li><a href="./week_07/practice8-02/practice8-02-3.html">practice8-02-3</a></li>
-                <li><a href="./week_07/practice8-03/practice8-03.html">practice8-03</a></li>
-                <li><a href="./week_07/practice8-04/practice8-04.html">practice8-04</a></li>
-                <li><a href="./week_07/practice8-05/practice8-05.html">practice8-05</a></li>
-                <li><a href="./week_07/practice8-06/practice8-06.html">practice8-06</a></li>
-                <li><a href="./week_07/practice8-07/practice8-07-1.html">practice8-07-1</a></li>
-                <li><a href="./week_07/practice8-07/practice8-07-2.html">practice8-07-2</a></li>
-                <li><a href="./week_07/practice8-08/practice8-08.html">practice8-08</a></li>
-                <li><a href="./week_07/practice8-09/practice8-09.html">practice8-09</a></li>
-                <li><a href="./week_07/practice8-10/practice8-10-1.html">practice8-10-1</a></li>
-                <li><a href="./week_07/practice8-10/practice8-10-2.html">practice8-10-2</a></li>
-            </ul>
-        </li>
-        <li>
-            <h3>chap9</h3>
-            <ul>
-                <li><a href="./week_07/OpenChallenge09/OpenChallenge09.html">OpenChallenge09.html</a></li>
-                <li><a href="./week_07/practice9-01/practice9-01.html">practice9-01</a></li>
-                <li><a href="./week_07/practice9-02/practice9-02.html">practice9-02</a></li>
-                <li><a href="./week_07/practice9-03/practice9-03.html">practice9-03</a></li>
-                <li><a href="./week_07/practice9-04/practice9-04.html">practice9-04</a></li>
-                <li><a href="./week_07/practice9-05/practice9-05.html">practice9-05</a></li>
-                <li><a href="./week_07/practice9-06/practice9-06.html">practice9-06</a></li>
-                <li><a href="./week_07/practice9-07/practice9-07.html">practice9-07</a></li>
-                <li><a href="./week_07/practice9-08/practice9-08.html">practice9-08</a></li>
-                <li><a href="./week_07/practice9-09/practice9-09.html">practice9-09</a></li>
-                <li><a href="./week_07/practice9-10/practice9-10.html">practice9-10</a></li>
-            </ul>
-        </li>
-    </ul>
 
+    <!-- hero -->
+    <div class="jumbotron sticky-top" style="position: relative;">
+        <div class="container" style="height: fit-content;">
+            <h1 id="mainTitle">웹 프로그래밍 2023</h1>
+            <div></div>
+            <div style="position: absolute; bottom: 10px; right: 10px; text-decoration: none;  color: hotpink;">
+                <a id="bgSrc" href="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/foto-des-weltraums-Q1p7bh3SHj8">Foto des
+                    Weltraums (@nasa)</a>
+            </div>
+        </div>
+        <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">깃허브 바로가기</a></p> -->
+    </div>
+
+
+
+
+
+    <div class="main">
+
+
+        <div class="container">
+
+            <h1>환영합니다!</h1>
+            <p class="navbar-text">웹 프로그래밍 과목의 과제물을 정리해둔 페이지입니다</p><br>
+            <hr>
+
+            <!-- Navbar  -->
+
+            <div class="row">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+
+            <nav id="navbar" class="navbar navbar-default sticky-top">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">WEB2023</a>
+
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-expanded="false">실습 문제 <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#c01">chap 1</a></li>
+                                    <li><a href="#c02">chap 2</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#c04">chap 4</a></li>
+                                    <li><a href="#c05">chap 5</a></li>
+                                    <li><a href="#c06">chap 6</a></li>
+                                    <li><a href="#c07">chap 7</a></li>
+                                    <li><a href="#c08">chap 8</a></li>
+                                    <li><a href="#c09">chap 9</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./week_03/aboutPage/index.html">About </a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+            <script>
+                // When the user scrolls the page, execute myFunction
+                window.onscroll = function () { myFunction() };
+
+                // Get the navbar
+                var navbar = document.getElementById("navbar");
+
+                // Get the offset position of the navbar
+                var sticky = navbar.offsetTop;
+
+                // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+                function myFunction() {
+                    if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky")
+                    } else {
+                        navbar.classList.remove("sticky");
+                    }
+                }
+            </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="row">
+
+                <nav class="col-md-2">
+                    <h3>ToC</h3>
+                    <ul>
+                        <li><a href="#w01">1주차 레포트</a></li>
+                        <li><a href="#w02">2주차 레포트</a></li>
+                        <li><a href="#w03">3주차 레포트</a></li>
+                        <li><a href="#w04">4주차 레포트</a></li>
+                        <li><a href="#w07">7주차 레포트</a></li>
+                    </ul>
+                </nav>
+
+
+                <section class="col-md-10">
+
+                    <h2 id="w01">1주차 레포트 <span class="badge">6</span></h2>
+
+                    <div class="panel panel-default">
+                        <ol class="breadcrumb">
+                            <li><a href="https://github.com/seoftbh/23-2_webProgramming/tree/main">main
+                                </a></li>
+                            <li class="active"><a
+                                    href="https://github.com/seoftbh/23-2_webProgramming/tree/main/week_01">week_01</a>
+                            </li>
+                        </ol>
+                        <!-- <div class="panel-heading">Panel heading without title</div> -->
+                        <div class="panel-body">
+                            <h3 id="c01" style="margin-top: -10px;">chap 1</h3>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="tg-0lax">문제</th>
+                                        <th class="tg-0lax">페이지</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tg-0lax">58p</td>
+                                        <td class="tg-0lax">
+                                            <li><a href="./week_01/58p.html">58p.html</a></li>
+                                            <ul>
+                                                <li><a href="./blob/main/week_01/58p.md">58p.md</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 1</td>
+                                        <td class="tg-0lax"><a href="./week_01/prac1-01.html">prac1-01.html</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 2</td>
+                                        <td class="tg-0lax"><a href="./week_01/prac1-02.html">prac1-02.html</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 3</td>
+                                        <td class="tg-0lax"><a href="./week_01/prac1-03.html">prac1-03.html</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 4</td>
+                                        <td class="tg-0lax"><a href="./week_01/prac1-04.html">prac1-04.html</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <br>
+                    <h2 id="w02">2주차 레포트 <span class="badge">11</span></h2>
+
+                    <div class="panel panel-default">
+                        <ol class="breadcrumb">
+                            <li><a href="https://github.com/seoftbh/23-2_webProgramming/tree/main">main
+                                </a></li>
+                            <li class="active"><a
+                                    href="https://github.com/seoftbh/23-2_webProgramming/tree/main/week_02">week_02</a>
+                            </li>
+                        </ol>
+                        <!-- <div class="panel-heading">Panel heading without title</div> -->
+                        <div class="panel-body">
+                            <h3 id="c02" style="margin-top: -10px;">chap 2</h3>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="tg-0lax">문제</th>
+                                        <th class="tg-0lax">페이지</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tg-0lax">OpenChallenge 2</td>
+                                        <td class="tg-0lax">
+                                            <a
+                                                href="./week_02/OpenChallenge/OpenChallenge02.html">OpenChallenge02.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 1</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_02/Practice2-01/practice2-01.html">practice2-01.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 2</td>
+                                        <td class="tg-0lax">
+                                            <ul>
+                                                <li><a
+                                                        href="./week_02/Practice2-02/practice2-02-1.html">practice2-02-1.html</a>
+                                                </li>
+                                                <li><a
+                                                        href="./week_02/Practice2-02/practice2-02-2.html">practice2-02-2.html</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 3</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_02/Practice2-03/practice2-03.html">practice2-03.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 4</td>
+                                        <td class="tg-0lax">
+                                            <ul>
+                                                <li><a
+                                                        href="./week_02/Practice2-04/practice2-04-1.html">practice2-04-1.html</a>
+                                                </li>
+                                                <li><a
+                                                        href="./week_02/Practice2-04/practice2-04-2.html">practice2-04-2.html</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 5</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_02/Practice2-05/practice2-05.html">practice-2-05.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 6</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_02/Practice2-06/practice-2-06.html">practice-2-06.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 7</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_02/Practice2-07/practice-2-07.html">practice-2-07.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 8</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_02/Practice2-08/practice-2-08.html">practice-2-08.html</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <br>
+                    <h2 id="w03">3주차 레포트 <span class="badge">25</span></h2>
+
+                    <div class="panel panel-default">
+                        <ol class="breadcrumb">
+                            <li><a href="https://github.com/seoftbh/23-2_webProgramming/tree/main">main
+                                </a></li>
+                            <li class="active"><a
+                                    href="https://github.com/seoftbh/23-2_webProgramming/tree/main/week_03">week_03</a>
+                            </li>
+                        </ol>
+                        <!-- <div class="panel-heading">Panel heading without title</div> -->
+                        <div class="panel-body">
+                            <h3 style="margin-top: -10px;">about</h3>
+                            <a class="btn btn-primary" href="./week_03/aboutPage/index.html" role="button"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> aboutPage</a>
+                            <br>
+                            <br>
+                            <br>
+
+                            <h3 id="c04" style="margin-top: -10px;">chap 4</h3>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="tg-0lax">문제</th>
+                                        <th class="tg-0lax">페이지</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tg-0lax">OpenChallenge 4</td>
+                                        <td class="tg-0lax">
+                                            <a
+                                                href="./week_03/OpenChallenge04/OpenChallenge04.html">OpenChallenge04.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 1</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_03/practice4-01/practice4-01.html">practice4-01</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 2</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_03/practice4-02/practice4-02.html">practice4-02</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 3</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_03/practice4-03/practice4-03.html">practice4-03</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 4</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_03/practice4-04/practice4-04.html">practice4-04</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 5</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_03/practice4-05/practice4-05.html">practice4-05</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 6</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_03/practice4-06/practice4-06.html">practice4-06</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 7</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_03/practice4-07/practice4-07.html">practice4-07</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 8</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_03/practice4-08/practice4-08.html">practice4-08</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 9</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_03/practice4-09/practice4-09.html">practice4-09</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <h3 id="c05" style="margin-top: -10px;">chap 5</h3>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="tg-0lax">문제</th>
+                                        <th class="tg-0lax">페이지</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tg-0lax">OpenChallenge 5</td>
+                                        <td class="tg-0lax">
+                                            <a
+                                                href="./week_03/OpenChallenge05/OpenChallenge05.html">OpenChallenge05.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 1</td>
+                                        <td class="tg-0lax">
+                                            <ul>
+                                                <li><a
+                                                        href="./week_03/practice5-01/practice5-01-1.html">practice5-01-1.html</a>
+                                                </li>
+                                                <li><a
+                                                        href="./week_03/practice5-01/practice5-01-2.html">practice5-01-2.html</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 2</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_03/practice5-02/practice5-02.html">practice5-02.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 3</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_03/practice5-03/practice5-03.html">practice5-03.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 4</td>
+                                        <td class="tg-0lax">
+                                            <ul>
+                                                <li><a
+                                                        href="./week_03/practice5-04/practice5-04-1.html">practice5-04-1.html</a>
+                                                </li>
+                                                <li><a
+                                                        href="./week_03/practice5-04/practice5-04-2.html">practice5-04-2.html</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 5</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_03/practice5-05/practice5-05.html">practice5-05.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 6</td>
+                                        <td class="tg-0lax">
+                                            <ul>
+                                                <li><a
+                                                        href="./week_03/practice5-06/practice5-06-1.html">practice5-06-1.html</a>
+                                                </li>
+                                                <li><a
+                                                        href="./week_03/practice5-06/practice5-06-2.html">practice5-06-2.html</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 7</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_03/practice5-07/practice5-07.html">practice5-07.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 8</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_03/practice5-08/practice5-08.html">practice5-08.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 9</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_03/practice5-09/practice5-09.html">practice5-09.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 10</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_03/practice5-10/practice5-10.html">practice5-10.html</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <br>
+                    <h2 id="w04">4주차 레포트 <span class="badge">25</span></h2>
+
+                    <div class="panel panel-default">
+                        <ol class="breadcrumb">
+                            <li><a href="https://github.com/seoftbh/23-2_webProgramming/tree/main">main
+                                </a></li>
+                            <li class="active"><a
+                                    href="https://github.com/seoftbh/23-2_webProgramming/tree/main/week_04">week_04</a>
+                            </li>
+                        </ol>
+                        <!-- <div class="panel-heading">Panel heading without title</div> -->
+                        <div class="panel-body">
+                            <h3 id="c06" style="margin-top: -10px;">chap 6</h3>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="tg-0lax">문제</th>
+                                        <th class="tg-0lax">페이지</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tg-0lax">OpenChallenge 6</td>
+                                        <td class="tg-0lax">
+                                            <a
+                                                href="./week_04/OpenChallenge06/OpenChallenge06.html">OpenChallenge06.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 1</td>
+                                        <td class="tg-0lax">
+                                            <ul>
+                                                <li><a
+                                                        href="./week_04/practice6-01/practice6-01.html">practice6-01.html</a>
+                                                </li>
+                                                <li><a
+                                                        href="./week_04/practice6-01/practice6-01-2.html">practice6-01-2.html</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 2</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_04/practice6-02/practice6-02.html">practice6-02.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 3</td>
+                                        <td class="tg-0lax">
+                                            <ul>
+                                                <li><a
+                                                        href="./week_04/practice6-03/practice6-03-1.html">practice6-03-1.html</a>
+                                                </li>
+                                                <li><a
+                                                        href="./week_04/practice6-03/practice6-03-2.html">practice6-03-2.html</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 4</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_04/practice6-04/practice6-04.html">practice6-04.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 5</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_04/practice6-05/practice6-05.html">practice6-05.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 6</td>
+                                        <td class="tg-0lax">
+                                            <ul>
+                                                <li><a
+                                                        href="./week_04/practice6-06/practice6-06-1.html">practice6-06-1.html</a>
+                                                </li>
+                                                <li><a
+                                                        href="./week_04/practice6-06/practice6-06-2.html">practice6-06-2.html</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 7</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_04/practice6-07/practice6-07.html">practice6-07.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 8</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_04/practice6-08/practice6-08.html">practice6-08.html</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <h3 id="c07" style="margin-top: -10px;">chap 7</h3>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="tg-0lax">문제</th>
+                                        <th class="tg-0lax">페이지</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tg-0lax">OpenChallenge 7</td>
+                                        <td class="tg-0lax">
+                                            <a
+                                                href="./week_04/OpenChallenge07/OpenChallenge07.html">OpenChallenge07.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 1</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_04/practice7-01/practice7-01.html">practice7-01.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 2</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_04/practice7-02/practice7-02.html">practice7-02.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 3</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_04/practice7-03/practice7-03.html">practice7-03.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 4</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_04/practice7-04/practice7-04.html">practice7-04.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 5</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_04/practice7-05/practice7-05.html">practice7-05.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 6</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_04/practice7-06/practice7-06.html">practice7-06.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 7</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_04/practice7-07/practice7-07.html">practice7-07.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 8</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_04/practice7-08/practice7-08.html">practice7-08.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 9</td>
+                                        <td class="tg-0lax">
+                                            <ul>
+                                                <li><a
+                                                        href="./week_04/practice7-09/practice7-09-1.html">practice7-09-1.html</a>
+                                                </li>
+                                                <li><a
+                                                        href="./week_04/practice7-09/practice7-09-2.html">practice7-09-2.html</a>
+                                                </li>
+                                                <li><a
+                                                        href="./week_04/practice7-09/practice7-09-3.html">practice7-09-3.html</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 10</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_04/practice7-10/practice7-10.html">practice7-10.html</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <br>
+                    <h2 id="w07">7주차 레포트 <span class="badge">28</span></h2>
+
+                    <div class="panel panel-default">
+                        <ol class="breadcrumb">
+                            <li><a href="https://github.com/seoftbh/23-2_webProgramming/tree/main">main
+                                </a></li>
+                            <li class="active"><a
+                                    href="https://github.com/seoftbh/23-2_webProgramming/tree/main/week_07">week_07</a>
+                            </li>
+                        </ol>
+                        <!-- <div class="panel-heading">Panel heading without title</div> -->
+                        <div class="panel-body">
+                            <h3 id="c08" style="margin-top: -10px;">chap 8</h3>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="tg-0lax">문제</th>
+                                        <th class="tg-0lax">페이지</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tg-0lax">OpenChallenge 8</td>
+                                        <td class="tg-0lax">
+                                            <a
+                                                href="./week_07/OpenChallenge08/OpenChallenge08.html">OpenChallenge08.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 1</td>
+                                        <td class="tg-0lax">
+                                            <ul>
+                                                <li><a
+                                                        href="./week_07/practice8-01/practice8-01-1.html">practice8-01-1</a>
+                                                </li>
+                                                <li><a
+                                                        href="./week_07/practice8-01/practice8-01-2.html">practice8-01-2</a>
+                                                </li>
+                                                <li><a
+                                                        href="./week_07/practice8-01/practice8-01-3.html">practice8-01-3</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 2</td>
+                                        <td class="tg-0lax">
+                                            <ul>
+                                                <li><a
+                                                        href="./week_07/practice8-02/practice8-02-1.html">practice8-02-1</a>
+                                                </li>
+                                                <li><a
+                                                        href="./week_07/practice8-02/practice8-02-2.html">practice8-02-2</a>
+                                                </li>
+                                                <li><a
+                                                        href="./week_07/practice8-02/practice8-02-3.html">practice8-02-3</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 3</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_07/practice8-03/practice8-03.html">practice8-03</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 4</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_07/practice8-04/practice8-04.html">practice8-04</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 5</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_07/practice8-05/practice8-05.html">practice8-05</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 6</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_07/practice8-06/practice8-06.html">practice8-06</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 7</td>
+                                        <td class="tg-0lax">
+                                            <ul>
+                                                <li><a
+                                                        href="./week_07/practice8-07/practice8-07-1.html">practice8-07-1</a>
+                                                </li>
+                                                <li><a
+                                                        href="./week_07/practice8-07/practice8-07-2.html">practice8-07-2</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 8</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_07/practice8-08/practice8-08.html">practice8-08</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 9</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_07/practice8-09/practice8-09.html">practice8-09</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 10</td>
+                                        <td class="tg-0lax">
+                                            <ul>
+                                                <li><a
+                                                        href="./week_07/practice8-10/practice8-10-1.html">practice8-10-1</a>
+                                                </li>
+                                                <li><a
+                                                        href="./week_07/practice8-10/practice8-10-2.html">practice8-10-2</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <h3 id="c09" style="margin-top: -10px;">chap 9</h3>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="tg-0lax">문제</th>
+                                        <th class="tg-0lax">페이지</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tg-0lax">OpenChallenge 9</td>
+                                        <td class="tg-0lax">
+                                            <a
+                                                href="./week_07/OpenChallenge09/OpenChallenge09.html">OpenChallenge09.html</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 1</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_07/practice9-01/practice9-01.html">practice9-01</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 2</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_07/practice9-02/practice9-02.html">practice9-02</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 3</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_07/practice9-03/practice9-03.html">practice9-03</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 4</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_07/practice9-04/practice9-04.html">practice9-04</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 5</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_07/practice9-05/practice9-05.html">practice9-05</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 6</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_07/practice9-06/practice9-06.html">practice9-06</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 7</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_07/practice9-07/practice9-07.html">practice9-07</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 8</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_07/practice9-08/practice9-08.html">practice9-08</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 9</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_07/practice9-09/practice9-09.html">practice9-09</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습문제 10</td>
+                                        <td class="tg-0lax">
+                                            <a href="./week_07/practice9-10/practice9-10.html">practice9-10</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div style="height: 30px;"></div>
+
+                </section>
+
+            </div>
+            <!-- <nav id="top" class="navbar navbar-default navbar-fixed-bottom">
+                <div class="container">
+                    ...
+                </div>
+            </nav> -->
+        </div>
+
+
+    </div>
 </body>
 
 </html>
