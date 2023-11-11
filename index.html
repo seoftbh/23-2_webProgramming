@@ -11,7 +11,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
     <link rel="icon" type="image/x-icon" href="./src/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="./src/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./src/favicon-32x32.png">
@@ -37,8 +38,17 @@
         }
 
         .jumbotron {
-            background: no-repeat center url("./src/earth.png");
+            /* background: no-repeat center url("./src/earth.png"); */
             height: 80%;
+            background-image:url("./src/earth.png");
+            background-size: cover;
+        }
+
+        .img-bg {
+            /* width:100%; */
+            /* height:100%; */
+            /* object-fit: contain; */
+            /* background-size: cover; */
         }
 
         .badge {}
@@ -90,6 +100,18 @@
         .sticky+.content {
             /* padding-top: 60px; */
         }
+
+
+
+        .btn-dark {
+            background-image: linear-gradient(to bottom, #515151, #000);
+            color: #fff;
+        }
+
+        .btn-dark:hover {
+            background-color: #515151;
+            color: #fff;
+        }
     </style>
 
 
@@ -115,6 +137,7 @@
     <!-- hero -->
     <div class="jumbotron sticky-top" style="position: relative;">
         <div class="container" style="height: fit-content;">
+            <!-- <img class="img-bg" src="./src/earth.png" alt="밤에 우주에서 본 지구의 실사 이미지입니다. 지구는 멀리서 보이며 행성의 곡률이 보입니다. 도시와 기타 인간 정착지에서 나오는 밝은 빛을 제외하고 지구는 대부분 어둡습니다. 빛은 특정 영역에 집중되어 있으며 그 사이에는 어둠이 많이 있습니다. 배경은 검은색이고 몇 개의 별이 보입니다."> -->
             <h1 id="mainTitle">웹 프로그래밍 2023</h1>
             <div></div>
             <div style="position: absolute; bottom: 10px; right: 10px; text-decoration: none;  color: hotpink;">
@@ -168,15 +191,21 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                 aria-expanded="false">실습 문제 <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
+                                    <li>&nbsp; HCJ 실습문제</li>
+                                    <li class="divider"></li>
                                     <li><a href="#c01">chap 1</a></li>
                                     <li><a href="#c02">chap 2</a></li>
-                                    <li class="divider"></li>
                                     <li><a href="#c04">chap 4</a></li>
                                     <li><a href="#c05">chap 5</a></li>
                                     <li><a href="#c06">chap 6</a></li>
                                     <li><a href="#c07">chap 7</a></li>
                                     <li><a href="#c08">chap 8</a></li>
                                     <li><a href="#c09">chap 9</a></li>
+                                    <li class="divider"></li>
+                                    <li class="divider"></li>
+                                    <li>&nbsp; PHP 실습문제</li>
+                                    <li class="divider"></li>
+                                    <li><a href="#p01">PHP 1</a></li>
                                 </ul>
                             </li>
                             <li><a href="./week_03/aboutPage/index.html">About </a></li>
@@ -227,6 +256,7 @@
                         <li><a href="#w03">3주차 레포트</a></li>
                         <li><a href="#w04">4주차 레포트</a></li>
                         <li><a href="#w07">7주차 레포트</a></li>
+                        <li><a href="#w10">10주차 레포트</a></li>
                     </ul>
                 </nav>
 
@@ -972,7 +1002,54 @@
                             </table>
                         </div>
                     </div>
-                    <div style="height: 30px;"></div>
+
+                    <br>
+                    <h2 id="w10">10주차 레포트 <span class="badge">8</span></h2>
+
+                    <div class="panel panel-default">
+                        <ol class="breadcrumb">
+                            <li><a href="https://github.com/seoftbh/23-2_webProgramming/tree/main">main
+                                </a></li>
+                            <li class="active"><a
+                                    href="https://github.com/seoftbh/23-2_webProgramming/tree/main/week_10">week_10</a>
+                            </li>
+                        </ol>
+                        <!-- <div class="panel-heading">Panel heading without title</div> -->
+                        <div class="panel-body">
+                            <h3 id="p01" style="margin-top: -10px;">PHP 과제 1</h3>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="tg-0lax">문제</th>
+                                        <th class="tg-0lax">페이지</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tg-0lax">이론 문제 <br>&nbsp; 1 ~ 5번</td>
+                                        <td class="tg-0lax">
+                                            <a class="btn btn-dark" href="https://github.com/seoftbh/23-2_webProgramming/blob/main/week_01/README.md" role="button"><i class="bi bi-markdown-fill"></i></span>&nbsp; README</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습 문제 1</td>
+                                        <td class="tg-0lax"><a href="https://web23php.seoftbh.repl.co/hw1/hw1-1/hw1-1.php">hw1-1.php</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습 문제 2</td>
+                                        <td class="tg-0lax"><a href="https://web23php.seoftbh.repl.co/hw1/hw1-2/hw1-2.php">hw1-2.php</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tg-0lax">실습 문제 3</td>
+                                        <td class="tg-0lax"><a href="https://web23php.seoftbh.repl.co/hw1/hw1-3/hw1-3.php">hw1-3.php</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- bottom spacing -->
+                    <div style="height: 50px;"></div>
 
                 </section>
 
