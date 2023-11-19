@@ -1,0 +1,3 @@
+Kim	35	남	kim@example.com
+Lee	28	여	lee@example.com
+Heo	29	남	heo@example.com

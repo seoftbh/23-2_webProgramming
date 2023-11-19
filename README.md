@@ -22,6 +22,9 @@
 * 8장 - Open Challenge 8, 실습 문제
 * 9장 - Open Challenge 9, 실습 문제
 
-### [10주차 과제 (11/13 제출)](https://github.com/seoftbh/23-2_webProgramming/tree/main/week_07)
+### [10주차 과제 (11/13 제출)](https://github.com/seoftbh/23-2_webProgramming/tree/main/week_10)
 * PHP 이론 문제 5문제
 * PHP 실습 문제 3문제
+
+### [11주차 과제 (11/20 제출)](https://github.com/seoftbh/23-2_webProgramming/tree/main/week_11)
+* PHP 실습 문제 5문제
