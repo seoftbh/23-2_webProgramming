@@ -24,7 +24,7 @@ A
 * [코드](./hw2-1/hw2-1.php)
 * [완성 페이지](https://web23php.seoftbh.repl.co/hw2/hw2-1/hw2-1.php)
 
-![1번 Screenshot](./md/1-2.png)
+![1번 Screenshot](./md/2-1.png)
 
 
 ### 2. 배열을 내림차순으로 정렬하고 싶다. sort() 함수를 이용하여 revsort() 함수를 설계하고 테스트하시오.  
