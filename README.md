@@ -10,6 +10,7 @@
 * 교재 104p - Open Challenge 2, 107 ~ 110p - 실습 문제 1 ~ 8번
 
 ### [3주차 과제 (9/25 제출)](https://github.com/seoftbh/23-2_webProgramming/tree/main/week_03)
+* 셀렉터 활용 예제
 * About Page
 * 4장 - Open Challenge 4, 실습 문제
 * 5장 - Open Challenge 5, 실습 문제
@@ -28,3 +29,7 @@
 
 ### [11주차 과제 (11/20 제출)](https://github.com/seoftbh/23-2_webProgramming/tree/main/week_11)
 * PHP 실습 문제 5문제
+
+### [12주차 과제](https://github.com/seoftbh/23-2_webProgramming/tree/main/week_12)
+* PHP 로그인 폼 구현
+
