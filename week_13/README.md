@@ -22,6 +22,8 @@
 ### Flowchart
 ![flowchart image](./md/login_ex%20-%20flowchart.png)
 
+---
+
 ### `functions.php` 소스 코드 분석
 
 
@@ -42,9 +44,12 @@ if (isset($_POST['register_btn'])) {
     register();
 }
 ```
-> [!NOTE] 주요 기능
+
+> [!NOTE]
+> 주요 기능
 > - 세션 시작 및 데이터페이스 연결
 > - 변수, 배열 선언 및 초기화
+
 - #### line 01: PHP 시작
 - #### line 02: 세션 시작(`session_start()`)
 - #### line 05: MySQL DB에 연결, 연결 정보(객체)를 변수 `$db`에 할당
@@ -342,7 +347,6 @@ function isAdmin()
 	- `isset($_SESSION['user'])`: 현재 세션에 `user` 세션 변수(키)가 존재하는지 확인
 	- `$_SESSION['user']['user_type'] == 'admin'`: `user` 세션에 저장된 사용자 정보 중에서 `user_type`이 `admin`인지 여부를 확인
 
----
 ---
 
 ## 세션과 쿠키
