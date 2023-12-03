@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 120%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('./images/earth.png') center/cover no-repeat;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+
+.header {
+    width: 350px;
+    margin: 0 auto;
+    color: white;
+    background: rgb(18, 117, 255);
+    text-align: center;
+    /* border: 1px solid #B0C4DE; */
+    border-bottom: none;
+    border-radius: 1.5em 1.5em 0px 0px;
+    padding: 20px;
+}
+
+form,
+.content {
+    width: 350px;
+    margin: 0px auto 20px auto;
+    padding: 20px;
+    /* border: 1px solid #B0C4DE; */
+    color: white;
+    background-color: rgba(91, 98, 107, 0.5) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 0px 0px 1.5em 1.5em;
+}
+
+
+.input-group {
+    margin: 10px 0px 10px 0px;
+    text-align: right; /* 이 부분을 추가합니다. */
+    padding-right: 2px;
+
+}
+
+.input-group label {
+    display: block;
+    text-align: left;
+    margin: 3px;
+    font-weight: bold;
+}
+
+.input-group input {
+    height: 30px;
+    width: 93%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+#user_type {
+    height: 40px;
+    width: 98%;
+    padding: 5px 10px;
+    background: white;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.btn {
+    margin-top: 26px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    /* color: white; */
+    background: rgb(93, 160, 255);
+    border: none;
+    border-radius: 5px;
+    display: inline-block; /* 인라인 블록으로 설정하여 다른 요소와 함께 나란히 표시됩니다. */
+
+}
+
+.error {
+    width: 92%;
+    margin: 0px auto;
+    padding: 10px;
+    border: 1px solid #a94442;
+    color: #a94442;
+    background: #f2dede;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.success {
+    color: #3c763d;
+    background: #dff0d8;
+    border: 1px solid #3c763d;
+    margin-bottom: 20px;
+}
+
+.profile_info img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    float: left;
+}
+
+.profile_info div {
+    display: inline-block;
+    margin: 5px;
+}
+
+.profile_info:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+a {
+    color: dodgerblue;
+    text-decoration: none;
+}
