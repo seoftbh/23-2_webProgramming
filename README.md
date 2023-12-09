@@ -36,3 +36,8 @@
 ### [13주차 과제 (12/04 제출)](https://github.com/seoftbh/23-2_webProgramming/tree/main/week_13)
 * PHP와 데이터베이스를 이용한 로그인 구현
     * 소스코드 분석
+
+---
+
+[PHP 호스팅 서버에 대한 정보](./aboutHosting.md)
+

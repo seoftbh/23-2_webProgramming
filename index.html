@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -40,7 +41,7 @@
         .jumbotron {
             /* background: no-repeat center url("./src/earth.png"); */
             height: 80%;
-            background-image:url("./src/earth.png");
+            background-image: url("./src/earth.png");
             background-size: cover;
         }
 
@@ -112,6 +113,23 @@
             background-color: #515151;
             color: #fff;
         }
+
+        /* Tooltip */
+        .wide-tooltip+.tooltip>.tooltip-inner {
+            max-width: 500px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            background-color: #515151;
+        }
+
+        .tooltip.top .tooltip-arrow {
+            bottom: 0;
+            left: 50%;
+            margin-left: -5px;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 6px solid #515151
+        }
     </style>
 
 
@@ -119,8 +137,8 @@
 
 <body>
     <!-- github-corner -->
-    <a href="https://github.com/seoftbh/23-2_webProgramming" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80"
-            viewBox="0 0 250 250"
+    <a href="https://github.com/seoftbh/23-2_webProgramming" class="github-corner"
+        aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250"
             style="fill:#359aff; color:#000; position: absolute; top: 0; border: 0; right: 0; z-index: 10;"
             aria-hidden="true">
             <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -189,7 +207,7 @@
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-expanded="false">실습 문제 <span class="caret"></span></a>
+                                    aria-expanded="false">실습 문제 <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li>&nbsp; HCJ 실습문제</li>
                                     <li class="divider"></li>
@@ -282,39 +300,58 @@
                         </ol>
                         <!-- <div class="panel-heading">Panel heading without title</div> -->
                         <div class="panel-body">
-                            <h3 id="c01" style="margin-top: -10px;">chap 1</h3>
+                            <h3 id="c01" style="margin-top: -10px;">chap 1 - 웹 프로그래밍과 HTML5 개요</h3>
                             <table class="table table-striped table-hover">
                                 <thead>
                                     <tr>
                                         <th class="tg-0lax">문제</th>
                                         <th class="tg-0lax">페이지</th>
+                                        <th class="tg-0lax">주제</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="tg-0lax">58p</td>
                                         <td class="tg-0lax">
-                                            <li><a href="./week_01/58p.html">58p.html</a></li>
-                                            <ul>
-                                                <li><a href="https://github.com/seoftbh/23-2_webProgramming/blob/main/week_01/58p.md">58p.md</a></li>
-                                            </ul>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_01/md/58p.png' width='300px'>"
+                                                    href="./week_01/58p.html">58p.html
+                                            </a>
                                         </td>
+                                        <td class="tg-0lax">HTML, CSS, JS를 이용한 페이지 꾸미기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 1</td>
-                                        <td class="tg-0lax"><a href="./week_01/prac1-01.html">prac1-01.html</a></td>
+                                        <td class="tg-0lax"><a class="wide-tooltip" data-toggle="tooltip"
+                                                data-html="true" data-placement="top"
+                                                title="<img src='./week_01/md/1-01.png' width='300px'>"
+                                                href="./week_01/prac1-01.html">prac1-01.html</a></td>
+                                        <td class="tg-0lax"><a href="https://github.com/seoftbh/23-2_webProgramming/blob/main/week_01/58p.md">HTML, CSS, JS 문법 오류 찾기</a></td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 2</td>
-                                        <td class="tg-0lax"><a href="./week_01/prac1-02.html">prac1-02.html</a></td>
+                                        <td class="tg-0lax"><a class="wide-tooltip" data-toggle="tooltip"
+                                                data-html="true" data-placement="top"
+                                                title="<img src='./week_01/md/1-02.png' width='300px'>"
+                                                href="./week_01/prac1-02.html">prac1-02.html</a></td>
+                                        <td class="tg-0lax"><a href="https://github.com/seoftbh/23-2_webProgramming/blob/main/week_01/58p.md">HTML, CSS, JS 문법 오류 찾기</a></td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 3</td>
-                                        <td class="tg-0lax"><a href="./week_01/prac1-03.html">prac1-03.html</a></td>
+                                        <td class="tg-0lax"><a class="wide-tooltip" data-toggle="tooltip"
+                                                data-html="true" data-placement="top"
+                                                title="<img src='./week_01/md/1-03.gif' width='300px'>"
+                                                href="./week_01/prac1-03.html">prac1-03.html</a></td>
+                                        <td class="tg-0lax">CSS로 HTML 태그 스타일 수정하기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 4</td>
-                                        <td class="tg-0lax"><a href="./week_01/prac1-04.html">prac1-04.html</a></td>
+                                        <td class="tg-0lax"><a class="wide-tooltip" data-toggle="tooltip"
+                                                data-html="true" data-placement="top"
+                                                title="<img src='./week_01/md/1-04.gif' width='300px'>"
+                                                href="./week_01/prac1-04.html">prac1-04.html</a></td>
+                                        <td class="tg-0lax">span 태그에 마우스를 올리면 사진 출력하기</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -335,83 +372,121 @@
                         </ol>
                         <!-- <div class="panel-heading">Panel heading without title</div> -->
                         <div class="panel-body">
-                            <h3 id="c02" style="margin-top: -10px;">chap 2</h3>
+                            <h3 id="c02" style="margin-top: -10px;">chap 2 - HTML5 기본 문서 만들기</h3>
                             <table class="table table-striped table-hover">
                                 <thead>
                                     <tr>
                                         <th class="tg-0lax">문제</th>
                                         <th class="tg-0lax">페이지</th>
+                                        <th class="tg-0lax">주제</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="tg-0lax">OpenChallenge 2</td>
                                         <td class="tg-0lax">
-                                            <a
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_02/md/oc2.png' width='300px'>"
                                                 href="./week_02/OpenChallenge/OpenChallenge02.html">OpenChallenge02.html</a>
                                         </td>
+                                        <td class="tg-0lax">HTML 태그로 웹 페이지 만들기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 1</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_02/Practice2-01/practice2-01.html">practice2-01.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_02/md/p2-01.png' width='300px'>"
+                                                href="./week_02/Practice2-01/practice2-01.html">practice2-01.html</a>
                                         </td>
+                                        <td class="tg-0lax">엔터티를 이용한 특수문자 표현</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 2</td>
                                         <td class="tg-0lax">
                                             <ul>
-                                                <li><a
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                        data-placement="top"
+                                                        title="<img src='./week_02/md/p2-02-1.png' width='300px'>"
                                                         href="./week_02/Practice2-02/practice2-02-1.html">practice2-02-1.html</a>
                                                 </li>
-                                                <li><a
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                        data-placement="top"
+                                                        title="<img src='./week_02/md/p2-02-2.png' width='300px'>"
                                                         href="./week_02/Practice2-02/practice2-02-2.html">practice2-02-2.html</a>
                                                 </li>
                                             </ul>
                                         </td>
+                                        <td class="tg-0lax">리스트 만들기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 3</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_02/Practice2-03/practice2-03.html">practice2-03.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_02/md/p2-03.png' width='300px'>"
+                                                href="./week_02/Practice2-03/practice2-03.html">practice2-03.html</a>
                                         </td>
+                                        <td class="tg-0lax">이미지 보여주기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 4</td>
                                         <td class="tg-0lax">
                                             <ul>
-                                                <li><a
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                        data-placement="top"
+                                                        title="<img src='./week_02/md/p2-04-1.png' width='300px'>"
                                                         href="./week_02/Practice2-04/practice2-04-1.html">practice2-04-1.html</a>
                                                 </li>
-                                                <li><a
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                        data-placement="top"
+                                                        title="<img src='./week_02/md/p2-04-2.png' width='300px'>"
                                                         href="./week_02/Practice2-04/practice2-04-2.html">practice2-04-2.html</a>
                                                 </li>
                                             </ul>
                                         </td>
+                                        <td class="tg-0lax">표 작성하기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 5</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_02/Practice2-05/practice2-05.html">practice-2-05.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_02/md/p2-05.png' width='300px'>"
+                                                href="./week_02/Practice2-05/practice2-05.html">practice-2-05.html</a>
                                         </td>
+                                        <td class="tg-0lax">하이퍼링크 만들기, target 윈도우 지정</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 6</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_02/Practice2-06/practice-2-06.html">practice-2-06.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_02/md/p2-06-2.png' width='300px'>"
+                                                href="./week_02/Practice2-06/practice-2-06.html">practice-2-06.html</a>
                                         </td>
+                                        <td class="tg-0lax">인라인 프레임(iframe) 만들기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 7</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_02/Practice2-07/practice-2-07.html">practice-2-07.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_02/md/p2-07.png' width='300px'>"
+                                                href="./week_02/Practice2-07/practice-2-07.html">practice-2-07.html</a>
                                         </td>
+                                        <td class="tg-0lax">오디오 삽입</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 8</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_02/Practice2-08/practice-2-08.html">practice-2-08.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_02/md/p2-08.png' width='300px'>"
+                                                href="./week_02/Practice2-08/practice-2-08.html">practice-2-08.html</a>
                                         </td>
+                                        <td class="tg-0lax">비디오 삽입</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -433,7 +508,10 @@
                         <!-- <div class="panel-heading">Panel heading without title</div> -->
                         <div class="panel-body">
                             <h3 style="margin-top: -10px;">about</h3>
-                            <a class="btn btn-primary" href="./week_03/aboutPage/index.html" role="button"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> aboutPage</a>
+                            <a class="btn btn-primary wide-tooltip" data-toggle="tooltip" data-html="true"
+                                data-placement="top" title="<img src='./week_03/md/aboutPage.gif' width='300px'>"
+                                href="./week_03/aboutPage/index.html" role="button"><span
+                                    class="glyphicon glyphicon-globe" aria-hidden="true"></span> aboutPage</a>
                             <br>
                             <br>
                             <br>
@@ -442,182 +520,278 @@
                                 <tbody>
                                     <tr>
                                         <td class="tg-0lax">셀렉터 활용 예제</td>
-                                        <td class="tg-0lax"><a href="./week_03/selector_example/selector_example.html">selector_example.html</a></td>
+                                        <td class="tg-0lax"><a class="wide-tooltip" data-toggle="tooltip"
+                                                data-html="true" data-placement="top"
+                                                title="<img src='./week_03/md/selector_example.gif' width='300px'>"
+                                                href="./week_03/selector_example/selector_example.html">selector_example.html</a>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
                             <br>
                             <br>
 
-                            <h3 id="c04" style="margin-top: -10px;">chap 4</h3>
+                            <h3 id="c04" style="margin-top: -10px;">chap 4 - CSS3로 웹 페이지 꾸미기</h3>
                             <table class="table table-striped table-hover">
                                 <thead>
                                     <tr>
                                         <th class="tg-0lax">문제</th>
                                         <th class="tg-0lax">페이지</th>
+                                        <th class="tg-0lax">주제</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="tg-0lax">OpenChallenge 4</td>
                                         <td class="tg-0lax">
-                                            <a
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_03/md/OpenChallenge04.png' width='300px'>"
                                                 href="./week_03/OpenChallenge04/OpenChallenge04.html">OpenChallenge04.html</a>
                                         </td>
+                                        <td class="tg-0lax">CSS로 웹 페이지 모양 꾸미기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 1</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_03/practice4-01/practice4-01.html">practice4-01.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_03/md/practice4-01.png' width='300px'>"
+                                                href="./week_03/practice4-01/practice4-01.html">practice4-01.html</a>
                                         </td>
+                                        <td class="tg-0lax">태그 이름 셀렉터 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 2</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_03/practice4-02/practice4-02.html">practice4-02.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_03/md/practice4-02.png' width='300px'>"
+                                                href="./week_03/practice4-02/practice4-02.html">practice4-02.html</a>
                                         </td>
+                                        <td class="tg-0lax">태그 이름 셀렉터 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 3</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_03/practice4-03/practice4-03.html">practice4-03.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_03/md/practice4-03.png' width='300px'>"
+                                                href="./week_03/practice4-03/practice4-03.html">practice4-03.html</a>
                                         </td>
+                                        <td class="tg-0lax">색 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 4</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_03/practice4-04/practice4-04.html">practice4-04.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_03/md/practice4-04.png' width='300px'>"
+                                                href="./week_03/practice4-04/practice4-04.html">practice4-04.html</a>
                                         </td>
+                                        <td class="tg-0lax">클래스 셀렉터 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 5</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_03/practice4-05/practice4-05.html">practice4-05.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_03/md/practice4-05.png' width='300px'>"
+                                                href="./week_03/practice4-05/practice4-05.html">practice4-05.html</a>
                                         </td>
+                                        <td class="tg-0lax">셀렉터 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 6</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_03/practice4-06/practice4-06.html">practice4-06.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_03/md/practice4-06.gif' width='300px'>"
+                                                href="./week_03/practice4-06/practice4-06.html">practice4-06.html</a>
                                         </td>
+                                        <td class="tg-0lax">링크 꾸미기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 7</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_03/practice4-07/practice4-07.html">practice4-07.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_03/md/practice4-07.gif' width='300px'>"
+                                                href="./week_03/practice4-07/practice4-07.html">practice4-07.html</a>
                                         </td>
+                                        <td class="tg-0lax">hover 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 8</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_03/practice4-08/practice4-08.html">practice4-08.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_03/md/practice4-08.png' width='300px'>"
+                                                href="./week_03/practice4-08/practice4-08.html">practice4-08.html</a>
                                         </td>
+                                        <td class="tg-0lax">이미지 테두리 만들기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 9</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_03/practice4-09/practice4-09.html">practice4-09.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_03/md/practice4-09.gif' width='300px'>"
+                                                href="./week_03/practice4-09/practice4-09.html">practice4-09.html</a>
                                         </td>
+                                        <td class="tg-0lax">이미지 hover, 그림자</td>
                                     </tr>
                                 </tbody>
                             </table>
                             <br>
-                            <h3 id="c05" style="margin-top: -10px;">chap 5</h3>
+                            <h3 id="c05" style="margin-top: -10px;">chap 5 - CSS3 고급 활용</h3>
                             <table class="table table-striped table-hover">
                                 <thead>
                                     <tr>
                                         <th class="tg-0lax">문제</th>
                                         <th class="tg-0lax">페이지</th>
+                                        <th class="tg-0lax">주제</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="tg-0lax">OpenChallenge 5</td>
                                         <td class="tg-0lax">
-                                            <a
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_03/md/OpenChallenge05.png' width='300px'>"
                                                 href="./week_03/OpenChallenge05/OpenChallenge05.html">OpenChallenge05.html</a>
                                         </td>
+                                        <td class="tg-0lax">시맨틱 태그, CSS 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 1</td>
                                         <td class="tg-0lax">
                                             <ul>
-                                                <li><a
+                                                <li>
+                                                    <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                        data-placement="top"
+                                                        title="<img src='./week_03/md/practice5-01-1.png' width='300px'>"
                                                         href="./week_03/practice5-01/practice5-01-1.html">practice5-01-1.html</a>
                                                 </li>
-                                                <li><a
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                        data-placement="top"
+                                                        title="<img src='./week_03/md/practice5-01-2.png' width='300px'>"
                                                         href="./week_03/practice5-01/practice5-01-2.html">practice5-01-2.html</a>
                                                 </li>
                                             </ul>
                                         </td>
+                                        <td class="tg-0lax">div 태그, display 속성 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 2</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_03/practice5-02/practice5-02.html">practice5-02.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_03/md/practice5-02.png' width='300px'>"
+                                                href="./week_03/practice5-02/practice5-02.html">practice5-02.html</a>
                                         </td>
+                                        <td class="tg-0lax">position 속성 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 3</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_03/practice5-03/practice5-03.html">practice5-03.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_03/md/practice5-03.gif' width='300px'>"
+                                                href="./week_03/practice5-03/practice5-03.html">practice5-03.html</a>
                                         </td>
+                                        <td class="tg-0lax">버튼 hover</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 4</td>
                                         <td class="tg-0lax">
                                             <ul>
-                                                <li><a
+                                                <li>
+                                                    <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                        data-placement="top"
+                                                        title="<img src='./week_03/md/practice5-04-1.png' width='300px'>"
                                                         href="./week_03/practice5-04/practice5-04-1.html">practice5-04-1.html</a>
                                                 </li>
-                                                <li><a
+                                                <li>
+                                                    <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                        data-placement="top"
+                                                        title="<img src='./week_03/md/practice5-04-2.png' width='300px'>"
                                                         href="./week_03/practice5-04/practice5-04-2.html">practice5-04-2.html</a>
                                                 </li>
                                             </ul>
                                         </td>
+                                        <td class="tg-0lax">css 활용 - 리스트 hover, 배경 이미지 넣기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 5</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_03/practice5-05/practice5-05.html">practice5-05.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_03/md/practice5-05.png' width='300px'>"
+                                                href="./week_03/practice5-05/practice5-05.html">practice5-05.html</a>
                                         </td>
+                                        <td class="tg-0lax">float 배치</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 6</td>
                                         <td class="tg-0lax">
                                             <ul>
-                                                <li><a
+                                                <li>
+                                                    <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                        data-placement="top"
+                                                        title="<img src='./week_03/md/practice5-06-1.gif' width='300px'>"
                                                         href="./week_03/practice5-06/practice5-06-1.html">practice5-06-1.html</a>
                                                 </li>
-                                                <li><a
+                                                <li>
+                                                    <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                        data-placement="top"
+                                                        title="<img src='./week_03/md/practice5-06-2.gif' width='300px'>"
                                                         href="./week_03/practice5-06/practice5-06-2.html">practice5-06-2.html</a>
                                                 </li>
                                             </ul>
                                         </td>
+                                        <td class="tg-0lax">애니메이션 - 1초에 1회전, -90 ~ 90도 회전 무한 반복</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 7</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_03/practice5-07/practice5-07.html">practice5-07.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_03/md/practice5-07.gif' width='300px'>"
+                                            href="./week_03/practice5-07/practice5-07.html">practice5-07.html</a>
                                         </td>
+                                        <td class="tg-0lax">transition - 이미지 늘리기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 8</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_03/practice5-08/practice5-08.html">practice5-08.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_03/md/practice5-08.gif' width='300px'>"
+                                            href="./week_03/practice5-08/practice5-08.html">practice5-08.html</a>
                                         </td>
+                                        <td class="tg-0lax">리스트로 수직 메뉴 만들기, hover</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 9</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_03/practice5-09/practice5-09.html">practice5-09.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_03/md/practice5-09.png' width='300px'>"
+                                            href="./week_03/practice5-09/practice5-09.html">practice5-09.html</a>
                                         </td>
+                                        <td class="tg-0lax">리스트 글씨 키우기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 10</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_03/practice5-10/practice5-10.html">practice5-10.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_03/md/practice5-10.gif' width='300px'>"
+                                            href="./week_03/practice5-10/practice5-10.html">practice5-10.html</a>
                                         </td>
+                                        <td class="tg-0lax">애니메이션 - 화면 끝으로 이동</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -638,179 +812,265 @@
                         </ol>
                         <!-- <div class="panel-heading">Panel heading without title</div> -->
                         <div class="panel-body">
-                            <h3 id="c06" style="margin-top: -10px;">chap 6</h3>
+                            <h3 id="c06" style="margin-top: -10px;">chap 6 - 자바스크립트 언어</h3>
                             <table class="table table-striped table-hover">
                                 <thead>
                                     <tr>
                                         <th class="tg-0lax">문제</th>
                                         <th class="tg-0lax">페이지</th>
+                                        <th class="tg-0lax">주제</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="tg-0lax">OpenChallenge 6</td>
                                         <td class="tg-0lax">
-                                            <a
-                                                href="./week_04/OpenChallenge06/OpenChallenge06.html">OpenChallenge06.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_04/md/oc6_2.png' width='300px'>"
+                                            href="./week_04/OpenChallenge06/OpenChallenge06.html">OpenChallenge06.html</a>
                                         </td>
+                                        <td class="tg-0lax">prompt()로 입력받은 만큼 별문자 출력하기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 1</td>
                                         <td class="tg-0lax">
                                             <ul>
-                                                <li><a
-                                                        href="./week_04/practice6-01/practice6-01.html">practice6-01.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_04/md/6-1.png' width='300px'>"
+                                                    href="./week_04/practice6-01/practice6-01.html">practice6-01.html</a>
                                                 </li>
-                                                <li><a
-                                                        href="./week_04/practice6-01/practice6-01-2.html">practice6-01-2.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_04/md/6-1.png' width='300px'>"
+                                                    href="./week_04/practice6-01/practice6-01-2.html">practice6-01-2.html</a>
                                                 </li>
                                             </ul>
                                         </td>
+                                        <td class="tg-0lax">HTML 태그의 이벤트 리스너 속성에 자바스크립트 코드 작성, 외부 js 불러오기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 2</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_04/practice6-02/practice6-02.html">practice6-02.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_04/md/6-2.png' width='300px'>"
+                                            href="./week_04/practice6-02/practice6-02.html">practice6-02.html</a>
                                         </td>
+                                        <td class="tg-0lax">document.write() 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 3</td>
                                         <td class="tg-0lax">
                                             <ul>
-                                                <li><a
-                                                        href="./week_04/practice6-03/practice6-03-1.html">practice6-03-1.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_04/md/6-3-1.png' width='300px'>"
+                                                    href="./week_04/practice6-03/practice6-03-1.html">practice6-03-1.html</a>
                                                 </li>
-                                                <li><a
-                                                        href="./week_04/practice6-03/practice6-03-2.html">practice6-03-2.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_04/md/6-3-2.png' width='300px'>"
+                                                    href="./week_04/practice6-03/practice6-03-2.html">practice6-03-2.html</a>
                                                 </li>
                                             </ul>
                                         </td>
+                                        <td class="tg-0lax">document.write() 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 4</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_04/practice6-04/practice6-04.html">practice6-04.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_04/md/6-4_1.png' width='300px'>"
+                                            href="./week_04/practice6-04/practice6-04.html">practice6-04.html</a>
                                         </td>
+                                        <td class="tg-0lax">prompt(), document.write() 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 5</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_04/practice6-05/practice6-05.html">practice6-05.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_04/md/6-5_1.png' width='300px'>"
+                                            href="./week_04/practice6-05/practice6-05.html">practice6-05.html</a>
                                         </td>
+                                        <td class="tg-0lax">prompt(), document.write() 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 6</td>
                                         <td class="tg-0lax">
                                             <ul>
-                                                <li><a
-                                                        href="./week_04/practice6-06/practice6-06-1.html">practice6-06-1.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_04/md/6-6-1.png' width='300px'>"
+                                                    href="./week_04/practice6-06/practice6-06-1.html">practice6-06-1.html</a>
                                                 </li>
-                                                <li><a
-                                                        href="./week_04/practice6-06/practice6-06-2.html">practice6-06-2.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_04/md/6-6-2.png' width='300px'>"
+                                                    href="./week_04/practice6-06/practice6-06-2.html">practice6-06-2.html</a>
                                                 </li>
                                             </ul>
                                         </td>
+                                        <td class="tg-0lax">document.write() 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 7</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_04/practice6-07/practice6-07.html">practice6-07.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_04/md/6-7_2.png' width='300px'>"
+                                            href="./week_04/practice6-07/practice6-07.html">practice6-07.html</a>
                                         </td>
+                                        <td class="tg-0lax">prompt(), document.write() 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 8</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_04/practice6-08/practice6-08.html">practice6-08.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_04/md/6-8_2.png' width='300px'>"
+                                            href="./week_04/practice6-08/practice6-08.html">practice6-08.html</a>
                                         </td>
+                                        <td class="tg-0lax">prompt(), document.write() 활용, 수식 계산(eval() 함수)</td>
                                     </tr>
                                 </tbody>
                             </table>
                             <br>
-                            <h3 id="c07" style="margin-top: -10px;">chap 7</h3>
+                            <h3 id="c07" style="margin-top: -10px;">chap 7 - 자바스크립트 코어 객체와 배열</h3>
                             <table class="table table-striped table-hover">
                                 <thead>
                                     <tr>
                                         <th class="tg-0lax">문제</th>
                                         <th class="tg-0lax">페이지</th>
+                                        <th class="tg-0lax">주제</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="tg-0lax">OpenChallenge 7</td>
                                         <td class="tg-0lax">
-                                            <a
-                                                href="./week_04/OpenChallenge07/OpenChallenge07.html">OpenChallenge07.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_04/md/oc7.png' width='300px'>"
+                                            href="./week_04/OpenChallenge07/OpenChallenge07.html">OpenChallenge07.html</a>
                                         </td>
+                                        <td class="tg-0lax">배열을 리스트의 아이템으로 출력하기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 1</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_04/practice7-01/practice7-01.html">practice7-01.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_04/md/7-1.png' width='300px'>"
+                                            href="./week_04/practice7-01/practice7-01.html">practice7-01.html</a>
                                         </td>
+                                        <td class="tg-0lax">난수 생성, 배열 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 2</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_04/practice7-02/practice7-02.html">practice7-02.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_04/md/7-2_2.png' width='300px'>"
+                                            href="./week_04/practice7-02/practice7-02.html">practice7-02.html</a>
                                         </td>
+                                        <td class="tg-0lax">prompt(), 배열 정렬</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 3</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_04/practice7-03/practice7-03.html">practice7-03.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_04/md/7-3.png' width='300px'>"
+                                            href="./week_04/practice7-03/practice7-03.html">practice7-03.html</a>
                                         </td>
+                                        <td class="tg-0lax">Date 객체 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 4</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_04/practice7-04/practice7-04.html">practice7-04.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_04/md/7-4.png' width='300px'>"
+                                            href="./week_04/practice7-04/practice7-04.html">practice7-04.html</a>
                                         </td>
+                                        <td class="tg-0lax">Date 객체 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 5</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_04/practice7-05/practice7-05.html">practice7-05.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_04/md/7-5.png' width='300px'>"
+                                            href="./week_04/practice7-05/practice7-05.html">practice7-05.html</a>
                                         </td>
+                                        <td class="tg-0lax">문자열 배열 다루기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 6</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_04/practice7-06/practice7-06.html">practice7-06.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_04/md/7-6_2.png' width='300px'>"
+                                            href="./week_04/practice7-06/practice7-06.html">practice7-06.html</a>
                                         </td>
+                                        <td class="tg-0lax">문자열 분할</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 7</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_04/practice7-07/practice7-07.html">practice7-07.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_04/md/7-7.png' width='300px'>"
+                                            href="./week_04/practice7-07/practice7-07.html">practice7-07.html</a>
                                         </td>
+                                        <td class="tg-0lax">배열의 내용을 div로 출력하기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 8</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_04/practice7-08/practice7-08.html">practice7-08.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_04/md/7-8_1.png' width='300px'>"
+                                            href="./week_04/practice7-08/practice7-08.html">practice7-08.html</a>
                                         </td>
+                                        <td class="tg-0lax">배열의 내용을 div로 출력하기, 랜덤</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 9</td>
                                         <td class="tg-0lax">
                                             <ul>
-                                                <li><a
-                                                        href="./week_04/practice7-09/practice7-09-1.html">practice7-09-1.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_04/md/7-9.png' width='300px'>"
+                                                    href="./week_04/practice7-09/practice7-09-1.html">practice7-09-1.html</a>
                                                 </li>
-                                                <li><a
-                                                        href="./week_04/practice7-09/practice7-09-2.html">practice7-09-2.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_04/md/7-9.png' width='300px'>"
+                                                    href="./week_04/practice7-09/practice7-09-2.html">practice7-09-2.html</a>
                                                 </li>
-                                                <li><a
-                                                        href="./week_04/practice7-09/practice7-09-3.html">practice7-09-3.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_04/md/7-9.png' width='300px'>"
+                                                    href="./week_04/practice7-09/practice7-09-3.html">practice7-09-3.html</a>
                                                 </li>
                                             </ul>
                                         </td>
+                                        <td class="tg-0lax">사용자 정의 객체 생성 및 출력</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 10</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_04/practice7-10/practice7-10.html">practice7-10.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_04/md/7-10_2.png' width='300px'>"
+                                            href="./week_04/practice7-10/practice7-10.html">practice7-10.html</a>
                                         </td>
+                                        <td class="tg-0lax">사용자 정의 객체 생성 및 출력, prompt() 활용</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -831,194 +1091,290 @@
                         </ol>
                         <!-- <div class="panel-heading">Panel heading without title</div> -->
                         <div class="panel-body">
-                            <h3 id="c08" style="margin-top: -10px;">chap 8</h3>
+                            <h3 id="c08" style="margin-top: -10px;">chap 8 - HTML DOM과 Document</h3>
                             <table class="table table-striped table-hover">
                                 <thead>
                                     <tr>
                                         <th class="tg-0lax">문제</th>
                                         <th class="tg-0lax">페이지</th>
+                                        <th class="tg-0lax">주제</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="tg-0lax">OpenChallenge 8</td>
                                         <td class="tg-0lax">
-                                            <a
-                                                href="./week_07/OpenChallenge08/OpenChallenge08.html">OpenChallenge08.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/oc8.gif' width='300px'>"
+                                            href="./week_07/OpenChallenge08/OpenChallenge08.html">OpenChallenge08.html</a>
                                         </td>
+                                        <td class="tg-0lax">DOM 객체 제어 예제</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 1</td>
                                         <td class="tg-0lax">
                                             <ul>
-                                                <li><a
-                                                        href="./week_07/practice8-01/practice8-01-1.html">practice8-01-1.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_07/md/8-01-1.png' width='300px'>"
+                                                    href="./week_07/practice8-01/practice8-01-1.html">practice8-01-1.html</a>
                                                 </li>
-                                                <li><a
-                                                        href="./week_07/practice8-01/practice8-01-2.html">practice8-01-2.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_07/md/8-01-2.png' width='300px'>"
+                                                    href="./week_07/practice8-01/practice8-01-2.html">practice8-01-2.html</a>
                                                 </li>
-                                                <li><a
-                                                        href="./week_07/practice8-01/practice8-01-3.html">practice8-01-3.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_07/md/8-01-3.gif' width='300px'>"
+                                                    href="./week_07/practice8-01/practice8-01-3.html">practice8-01-3.html</a>
                                                 </li>
                                             </ul>
                                         </td>
+                                        <td class="tg-0lax">태그 이름으로 DOM 객체 찾기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 2</td>
                                         <td class="tg-0lax">
                                             <ul>
-                                                <li><a
-                                                        href="./week_07/practice8-02/practice8-02-1.html">practice8-02-1.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_07/md/8-02-1.png' width='300px'>"
+                                                    href="./week_07/practice8-02/practice8-02-1.html">practice8-02-1.html</a>
                                                 </li>
-                                                <li><a
-                                                        href="./week_07/practice8-02/practice8-02-2.html">practice8-02-2.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_07/md/8-02-2.gif' width='300px'>"
+                                                    href="./week_07/practice8-02/practice8-02-2.html">practice8-02-2.html</a>
                                                 </li>
-                                                <li><a
-                                                        href="./week_07/practice8-02/practice8-02-3.html">practice8-02-3.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_07/md/8-02-3.gif' width='300px'>"
+                                                    href="./week_07/practice8-02/practice8-02-3.html">practice8-02-3.html</a>
                                                 </li>
                                             </ul>
                                         </td>
+                                        <td class="tg-0lax">id 속성 값으로 DOM 객체 찾기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 3</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_07/practice8-03/practice8-03.html">practice8-0.html3</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/8-03.gif' width='300px'>"
+                                            href="./week_07/practice8-03/practice8-03.html">practice8-0.html3</a>
                                         </td>
+                                        <td class="tg-0lax">DOM 객체의 속성 값 변경</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 4</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_07/practice8-04/practice8-04.html">practice8-04.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/8-04.gif' width='300px'>"
+                                            href="./week_07/practice8-04/practice8-04.html">practice8-04.html</a>
                                         </td>
+                                        <td class="tg-0lax">DOM 객체 제어</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 5</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_07/practice8-05/practice8-05.html">practice8-05.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/8-05.gif' width='300px'>"
+                                            href="./week_07/practice8-05/practice8-05.html">practice8-05.html</a>
                                         </td>
+                                        <td class="tg-0lax">DOM 객체 제어 - z-index 스타일 프로퍼티</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 6</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_07/practice8-06/practice8-06.html">practice8-06.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/8-06.gif' width='300px'>"
+                                            href="./week_07/practice8-06/practice8-06.html">practice8-06.html</a>
                                         </td>
+                                        <td class="tg-0lax">DOM 객체 동적 생성</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 7</td>
                                         <td class="tg-0lax">
                                             <ul>
-                                                <li><a
-                                                        href="./week_07/practice8-07/practice8-07-1.html">practice8-07-1.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_07/md/8-07-1.gif' width='300px'>"
+                                                    href="./week_07/practice8-07/practice8-07-1.html">practice8-07-1.html</a>
                                                 </li>
-                                                <li><a
-                                                        href="./week_07/practice8-07/practice8-07-2.html">practice8-07-2.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_07/md/8-07-2.gif' width='300px'>"
+                                                    href="./week_07/practice8-07/practice8-07-2.html">practice8-07-2.html</a>
                                                 </li>
                                             </ul>
                                         </td>
+                                        <td class="tg-0lax">DOM 객체 제어 - 애니메이션</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 8</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_07/practice8-08/practice8-08.html">practice8-08.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/8-08.gif' width='300px'>"
+                                            href="./week_07/practice8-08/practice8-08.html">practice8-08.html</a>
                                         </td>
+                                        <td class="tg-0lax">DOM 객체 제어 - 트랜지션</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 9</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_07/practice8-09/practice8-09.html">practice8-09.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/8-09.gif' width='300px'>"
+                                            href="./week_07/practice8-09/practice8-09.html">practice8-09.html</a>
                                         </td>
+                                        <td class="tg-0lax">DOM 객체 동적 생성 - 리스트</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 10</td>
                                         <td class="tg-0lax">
                                             <ul>
-                                                <li><a
-                                                        href="./week_07/practice8-10/practice8-10-1.html">practice8-10-1.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_07/md/8-10-1.gif' width='300px'>"
+                                                    href="./week_07/practice8-10/practice8-10-1.html">practice8-10-1.html</a>
                                                 </li>
-                                                <li><a
-                                                        href="./week_07/practice8-10/practice8-10-2.html">practice8-10-2.html</a>
+                                                <li><a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                    data-placement="top"
+                                                    title="<img src='./week_07/md/8-10-2.gif' width='300px'>"
+                                                    href="./week_07/practice8-10/practice8-10-2.html">practice8-10-2.html</a>
                                                 </li>
                                             </ul>
                                         </td>
+                                        <td class="tg-0lax">DOM 객체 동적 생성 - 버튼</td>
                                     </tr>
                                 </tbody>
                             </table>
                             <br>
-                            <h3 id="c09" style="margin-top: -10px;">chap 9</h3>
+                            <h3 id="c09" style="margin-top: -10px;">chap 9 - 이벤트 기초 및 활용</h3>
                             <table class="table table-striped table-hover">
                                 <thead>
                                     <tr>
                                         <th class="tg-0lax">문제</th>
                                         <th class="tg-0lax">페이지</th>
+                                        <th class="tg-0lax">주제</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="tg-0lax">OpenChallenge 9</td>
                                         <td class="tg-0lax">
-                                            <a
-                                                href="./week_07/OpenChallenge09/OpenChallenge09.html">OpenChallenge09.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/oc9.gif' width='300px'>"
+                                            href="./week_07/OpenChallenge09/OpenChallenge09.html">OpenChallenge09.html</a>
                                         </td>
+                                        <td class="tg-0lax">마우스 이벤트 리스너 예제</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 1</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_07/practice9-01/practice9-01.html">practice9-01.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/9-01.gif' width='300px'>"
+                                            href="./week_07/practice9-01/practice9-01.html">practice9-01.html</a>
                                         </td>
+                                        <td class="tg-0lax">이벤트 리스너 - 마우스 포커스</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 2</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_07/practice9-02/practice9-02.html">practice9-02.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/9-02.gif' width='300px'>"
+                                            href="./week_07/practice9-02/practice9-02.html">practice9-02.html</a>
                                         </td>
+                                        <td class="tg-0lax">이벤트 리스너 - 라디오 버튼을 클릭하면 이미지 출력</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 3</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_07/practice9-03/practice9-03.html">practice9-03.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/9-03.gif' width='300px'>"
+                                            href="./week_07/practice9-03/practice9-03.html">practice9-03.html</a>
                                         </td>
+                                        <td class="tg-0lax">키보드 이벤트 리스너</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 4</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_07/practice9-04/practice9-04.html">practice9-04.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/9-04.gif' width='300px'>"
+                                            href="./week_07/practice9-04/practice9-04.html">practice9-04.html</a>
                                         </td>
+                                        <td class="tg-0lax">마우스 이벤트 리스너 - 커서를 따라 이미지 이동 시키기</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 5</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_07/practice9-05/practice9-05.html">practice9-05.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/9-05.gif' width='300px'>"
+                                            href="./week_07/practice9-05/practice9-05.html">practice9-05.html</a>
                                         </td>
+                                        <td class="tg-0lax">마우스 이벤트 리스너 - 화면 더블 클릭으로 배경색 변경</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 6</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_07/practice9-06/practice9-06.html">practice9-06.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/9-06.gif' width='300px'>"
+                                            href="./week_07/practice9-06/practice9-06.html">practice9-06.html</a>
                                         </td>
+                                        <td class="tg-0lax">마우스 이벤트 리스너 - 마우스 휠을 이용한 이미지 확대 축소</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 7</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_07/practice9-07/practice9-07.html">practice9-07.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/9-07.gif' width='300px'>"
+                                            href="./week_07/practice9-07/practice9-07.html">practice9-07.html</a>
                                         </td>
+                                        <td class="tg-0lax">특정 태그에만 이벤트 리스너 추가</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 8</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_07/practice9-08/practice9-08.html">practice9-08.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/9-08.gif' width='300px'>"
+                                            href="./week_07/practice9-08/practice9-08.html">practice9-08.html</a>
                                         </td>
+                                        <td class="tg-0lax">리스트의 아이템에 이벤트 리스너 추가</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 9</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_07/practice9-09/practice9-09.html">practice9-09.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/9-09.gif' width='300px'>"
+                                            href="./week_07/practice9-09/practice9-09.html">practice9-09.html</a>
                                         </td>
+                                        <td class="tg-0lax">리스트의 아이템에 이벤트 리스너 추가</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습문제 10</td>
                                         <td class="tg-0lax">
-                                            <a href="./week_07/practice9-10/practice9-10.html">practice9-10.html</a>
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_07/md/9-10.gif' width='300px'>"
+                                            href="./week_07/practice9-10/practice9-10.html">practice9-10.html</a>
                                         </td>
+                                        <td class="tg-0lax">마우스, 키보드 이벤트 리스너 활용 - 계산기</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1041,36 +1397,64 @@
                         <div class="panel-body">
                             <h3 id="p01" style="margin-top: -10px;">PHP 과제 1</h3>
                             <table class="table table-striped table-hover">
+                                <tbody>
+                                    <tr>
+                                        <!-- <td class="tg-0lax">이론 문제 <br>&nbsp; 1 ~ 5번</td> -->
+                                        <td class="tg-0lax">이론 문제 1 ~ 5번</td>
+                                        <td class="tg-0lax">
+                                            <a class="btn btn-dark"
+                                                href="https://github.com/seoftbh/23-2_webProgramming/blob/main/week_10/README.md"
+                                                role="button"><i class="bi bi-markdown-fill"></i></span>&nbsp;
+                                                README</a>
+                                            </td>
+                                            <td class="tg-0lax"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-striped table-hover">
                                 <thead>
                                     <tr>
                                         <th class="tg-0lax">문제</th>
                                         <th class="tg-0lax">페이지</th>
+                                        <th class="tg-0lax">주제</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="tg-0lax">이론 문제 <br>&nbsp; 1 ~ 5번</td>
-                                        <td class="tg-0lax">
-                                            <a class="btn btn-dark" href="https://github.com/seoftbh/23-2_webProgramming/blob/main/week_10/README.md" role="button"><i class="bi bi-markdown-fill"></i></span>&nbsp; README</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
                                         <td class="tg-0lax">실습 문제 1</td>
-                                        <td class="tg-0lax"><a href="https://playground.seoftbh.dev/web23/hw1/hw1-1/hw1-1.php">hw1-1.php</a></td>
+                                        <td class="tg-0lax">
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_10/md/1-1_1.png' width='300px'>"
+                                            href="https://playground.seoftbh.dev/web23/hw1/hw1-1/hw1-1.php">hw1-1.php</az>
+                                        </td>
+                                        <td class="tg-0lax">php 함수 선언 및 사용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습 문제 2</td>
-                                        <td class="tg-0lax"><a href="https://playground.seoftbh.dev/web23/hw1/hw1-2/hw1-2.php">hw1-2.php</a></td>
+                                        <td class="tg-0lax">
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_10/md/1-2.png' width='300px'>"
+                                            href="https://playground.seoftbh.dev/web23/hw1/hw1-2/hw1-2.php">hw1-2.php</a>
+                                        </td>
+                                        <td class="tg-0lax">php while 문 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습 문제 3</td>
-                                        <td class="tg-0lax"><a href="https://playground.seoftbh.dev/web23/hw1/hw1-3/hw1-3.php">hw1-3.php</a></td>
+                                        <td class="tg-0lax">
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_10/md/1-3.png' width='300px'>"
+                                            href="https://playground.seoftbh.dev/web23/hw1/hw1-3/hw1-3.php">hw1-3.php</a>
+                                        </td>
+                                        <td class="tg-0lax">php 삼항 연산자 활용</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    
+
                     <br>
                     <h2 id="w11">11주차 레포트 <span class="badge">5</span></h2>
 
@@ -1091,28 +1475,59 @@
                                     <tr>
                                         <th class="tg-0lax">문제</th>
                                         <th class="tg-0lax">페이지</th>
+                                        <th class="tg-0lax">주제</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="tg-0lax">실습 문제 1</td>
-                                        <td class="tg-0lax"><a href="https://playground.seoftbh.dev/web23/hw2/hw2-1/hw2-1.php">hw2-1.php</a></td>
+                                        <td class="tg-0lax">
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_11/md/2-1.png' width='300px'>"
+                                            href="https://playground.seoftbh.dev/web23/hw2/hw2-1/hw2-1.php">hw2-1.php</a>
+                                        </td>
+                                        <td class="tg-0lax">php for문 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습 문제 2</td>
-                                        <td class="tg-0lax"><a href="https://playground.seoftbh.dev/web23/hw2/hw2-2/hw2-2.php">hw2-2.php</a></td>
+                                        <td class="tg-0lax">
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_11/md/2-2.png' width='300px'>"
+                                            href="https://playground.seoftbh.dev/web23/hw2/hw2-2/hw2-2.php">hw2-2.php</a>
+                                        </td>
+                                        <td class="tg-0lax">php 배열 활용 - 정렬</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습 문제 3</td>
-                                        <td class="tg-0lax"><a href="https://playground.seoftbh.dev/web23/hw2/hw2-3/hw2-3.php">hw2-3.php</a></td>
+                                        <td class="tg-0lax">
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_11/md/2-3.png' width='300px'>"
+                                            href="https://playground.seoftbh.dev/web23/hw2/hw2-3/hw2-3.php">hw2-3.php</a>
+                                        </td>
+                                        <td class="tg-0lax">php 파일 입출력</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습 문제 4</td>
-                                        <td class="tg-0lax"><a href="https://playground.seoftbh.dev/web23/hw2/hw2-4/hw2-4.php">hw2-4.php</a></td>
+                                        <td class="tg-0lax">
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_11/md/2-5.png' width='300px'>"
+                                            href="https://playground.seoftbh.dev/web23/hw2/hw2-4/hw2-4.php">hw2-4.php</a>
+                                        </td>
+                                        <td class="tg-0lax">php 연상 배열 활용</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">실습 문제 5</td>
-                                        <td class="tg-0lax"><a href="https://playground.seoftbh.dev/web23/hw2/hw2-5/hw2-5.php">hw2-5.php</a></td>
+                                        <td class="tg-0lax">
+                                            <a class="wide-tooltip" data-toggle="tooltip" data-html="true"
+                                            data-placement="top"
+                                            title="<img src='./week_11/md/2-5.png' width='300px'>"
+                                            href="https://playground.seoftbh.dev/web23/hw2/hw2-5/hw2-5.php">hw2-5.php</a>
+                                        </td>
+                                        <td class="tg-0lax">php 파일 입출력 - 분리자, 배열 활용</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1139,8 +1554,15 @@
                                     <tr>
                                         <td class="tg-0lax">로그인 폼 구현</td>
                                         <td class="tg-0lax">
-                                            <a class="btn btn-primary" href="https://playground.seoftbh.dev/web23/login_form" role="button"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> login_form</a>
+                                            <a class="btn btn-primary wide-tooltip"
+                                                data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_12/md/login-form.gif' width='300px'>"
+                                                href="https://playground.seoftbh.dev/web23/login_form"
+                                                role="button"><span class="glyphicon glyphicon-globe"
+                                                    aria-hidden="true"></span> login_form</a>
                                         </td>
+                                        <td class="tg-0lax">폼과 POST를 이용한 로그인 폼 예제</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1167,14 +1589,24 @@
                                     <tr>
                                         <td class="tg-0lax">데이터베이스를 이용한 로그인 구현</td>
                                         <td class="tg-0lax">
-                                            <a class="btn btn-primary" href="https://playground.seoftbh.dev/web23/login_ex" role="button"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> login_ex</a>
+                                            <a class="btn btn-primary wide-tooltip" data-toggle="tooltip" data-html="true"
+                                                data-placement="top"
+                                                title="<img src='./week_13/md/login_ex.gif' width='300px'>"
+                                                href="https://playground.seoftbh.dev/web23/login_ex" role="button"><span
+                                                    class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                                                login_ex</a>
                                         </td>
+                                        <td class="tg-0lax">세션과 데이터베이스를 이용한 PHP로그인 구현</td>
                                     </tr>
                                     <tr>
                                         <td class="tg-0lax">소스코드 분석</td>
                                         <td class="tg-0lax">
-                                            <a class="btn btn-dark" href="https://github.com/seoftbh/23-2_webProgramming/blob/main/week_13/README.md" role="button"><i class="bi bi-markdown-fill"></i></span>&nbsp; README</a>
+                                            <a class="btn btn-dark"
+                                            href="https://github.com/seoftbh/23-2_webProgramming/blob/main/week_13/README.md"
+                                            role="button"><i class="bi bi-markdown-fill"></i></span>&nbsp;
+                                            README</a>
                                         </td>
+                                        <td class="tg-0lax"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1199,6 +1631,13 @@
 
 
     </div>
+
+    <!-- Bootstrap Tooltip -->
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 </body>
 
 </html>
